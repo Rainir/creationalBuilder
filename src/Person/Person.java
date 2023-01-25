@@ -9,17 +9,8 @@ public class Person {
     protected String address;
 
     public Person(PersonBuilder personBuilder) {
-//        if (personBuilder.name == null) {
-//            throw new IllegalStateException("Select name");
-//        }
         this.name = personBuilder.name;
-//        if (personBuilder.lastName == null) {
-//            throw new IllegalStateException("Select lastName");
-//        }
         this.lastName = personBuilder.lastName;
-//        if (personBuilder.age < 0 || personBuilder.age > 150) {
-//            throw new IllegalArgumentException("Enter a valid age(0=<age<150)");
-//        }
         this.age = personBuilder.age;
         this.address = personBuilder.address;
     }

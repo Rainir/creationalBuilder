@@ -8,25 +8,16 @@ public class PersonBuilder {
 
 
     public PersonBuilder setName(String name) {
-        if (name == null) {
-            throw new IllegalStateException("Select name");
-        }
         this.name = name;
         return this;
     }
 
     public PersonBuilder setLastName(String lastName) {
-        if (lastName == null) {
-            throw new IllegalStateException("Select lastName");
-        }
         this.lastName = lastName;
         return this;
     }
 
     public PersonBuilder setAge(Integer age) {
-        if (age < 0 || age > 150) {
-            throw new IllegalArgumentException("Enter a valid age(0=<age<150)");
-        }
         this.age = age;
         return this;
     }
@@ -37,6 +28,15 @@ public class PersonBuilder {
     }
 
     public Person build() {
+        if (name == null) {
+            throw new IllegalStateException("Select name");
+        }
+        if (lastName == null) {
+            throw new IllegalStateException("Select lastName");
+        }
+        if (age < 0 || age > 150) {
+            throw new IllegalArgumentException("Enter a valid age(0=<age<150)");
+        }
         return new Person(this);
     }
 }

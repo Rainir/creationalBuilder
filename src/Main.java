@@ -14,27 +14,12 @@ public class Main {
                 .build();
         System.out.println("У " + mom + " есть сын, " + son);
         System.out.println("Есть ли у " + mom.getName() + " адрес: " + mom.hasAddress());
-        System.out.println("Есть ли у " + mom.getName() + " возраст: " + mom.hasAge());
+        System.out.println("Есть ли у " + son.getName() + " возраст: " + son.hasAge() + " " + son.getAge().getAsInt());
         son.happyBirthday();
-        System.out.println("Есть ли у " + son.getName() + " возраст: " + son.hasAge());
+        System.out.println("Есть ли у " + son.getName() + " возраст: " + son.hasAge() + " " + son.getAge().getAsInt());
 
         mom.setAddress("Краснодар");
         System.out.println(mom);
-
-
-//            Person dada = new PersonBuilder()
-//                    //.setName("Максим")
-//                    .setLastName("Вольф")
-//                    .setAge(21)
-//                    .setAddress("Токио")
-//                    .build();
-//
-//            Person brother = new PersonBuilder()
-//                .setName("Василий")
-//                .setLastName("Вольф")
-//                .setAge(-3)
-//                .setAddress("Токио")
-//                .build();
 
         try {
             Person dad = new PersonBuilder()
